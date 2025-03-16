@@ -2,17 +2,9 @@
 
 int main(int argc, char** argv)
 {
-	if (argc != 1)
-	{
-		int	i;
+	if (argc == 1)
+		ft_error("No arguments recevied\n", 1);
+	ft_verify_numbers(argc, argv);
 
-		i = 1;
-		while (i < argc)
-		{
-			ft_printf("%s\n", argv[i]);
-			i++;
-		}
-	}
-	else
-		ft_printf("Otario\n");
+	return (0);
 }
