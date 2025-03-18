@@ -2,3 +2,5 @@ lista de erros
 echo?
 
 1- Numero invalido de argumentos
+2- Não é um numero valido
+
