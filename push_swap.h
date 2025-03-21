@@ -10,3 +10,7 @@ typedef struct s_node
 void	ft_error(char *str, int n);
 
 void	ft_verify_numbers(int n, char **str);
+t_node	**ft_create_stack(int n, char **str);
+
+t_node	*ft_newnode(int content);
+void	ft_lstappend(t_node **list, t_node *new);

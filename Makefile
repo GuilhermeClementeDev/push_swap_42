@@ -10,7 +10,7 @@ LIBFT = ./lib/libft.a
 
 LIB_PATH = ./lib
 
-MY_SOURCES = main.c error.c create_stack.c
+MY_SOURCES = main.c error.c create_stack.c ft_utilites.c
 
 all: $(NAME)
 
