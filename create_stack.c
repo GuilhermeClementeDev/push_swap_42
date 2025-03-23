@@ -12,7 +12,7 @@ void	ft_process_str(t_node **list, char *str)
 				k++;
 		if (str[k])
 		{
-			tmp = ft_newnode(ft_atoi(&str[k]));
+			tmp = ft_newnode(ft_atoil(&str[k], list));
 			if (list == NULL)
 				list = &tmp;
 			else
