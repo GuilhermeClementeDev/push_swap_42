@@ -10,16 +10,16 @@ void	ft_verify_numbers(int n, char **str)
 	{
 		k = 0;
 		if (!str[i][k])
-			ft_error("Invalid argument\n", 3);
+			ft_error(3);
 		while (str[i][k])
 		{
 			while ((str[i][k] >= '\t' && str[i][k] <= '\r') || str[i][k] == ' ')
 				k++;
 			if (str[i][k] == '-' || str[i][k] == '+')
 				if (!ft_isdigit(str[i][++k]))
-					ft_error("Not a number\n", 2);
+					ft_error(2);
 			if (!ft_isdigit(str[i][k]) && str[i][k] != '\0')
-				ft_error("Not a number\n", 2);
+				ft_error(2);
 			if (str[i][k])
 				k++;
 		}
@@ -57,7 +57,7 @@ t_node	**ft_create_stack(int n, char **str)
 
 	list = malloc(sizeof(t_node *));
 	if (!list)
-		ft_error("Memory allocation error\n", 1);
+		ft_error(1);
 	*list = NULL;
 	i = 1;
 	while (i < n)

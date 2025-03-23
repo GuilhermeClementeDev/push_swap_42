@@ -33,7 +33,7 @@ int main(int argc, char** argv)
 	t_node	**list_b;
 
 	if (argc == 1)
-		ft_error("No arguments recevied\n", 1);
+		ft_error(1);
 	ft_verify_numbers(argc, argv);
 	list_a = ft_create_stack(argc, argv);
 	list_b = ft_create_stack(0, argv);

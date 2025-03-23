@@ -7,7 +7,7 @@ typedef struct s_node
 	struct s_node	*next;
 }					t_node;
 
-void	ft_error(char *str, int n);
+void	ft_error(int n);
 
 void	ft_verify_numbers(int n, char **str);
 t_node	**ft_create_stack(int n, char **str);
