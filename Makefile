@@ -11,7 +11,7 @@ LIBFT = ./lib/libft.a
 LIB_PATH = ./lib
 
 MY_SOURCES = main.c error.c create_stack.c ft_utilites.c ./moves/swap.c \
-./moves/push.c ./moves/rotate.c
+./moves/push.c ./moves/rotate.c verification.c
 
 all: $(NAME)
 

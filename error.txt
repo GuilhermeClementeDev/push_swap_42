@@ -6,3 +6,4 @@ echo?
 1- Numero invalido de argumentos
 2- Não é um numero valido
 3- String vazia ""
+4- Numero igual

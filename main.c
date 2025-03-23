@@ -36,8 +36,10 @@ int main(int argc, char** argv)
 		ft_error(1);
 	ft_verify_numbers(argc, argv);
 	list_a = ft_create_stack(argc, argv);
+	ft_check_equal(list_a);
+	ft_check_order(list_a);
+
 	list_b = ft_create_stack(0, argv);
-	ft_reverse_rotate_ab(list_a);
 	ft_print_list(*list_a, *list_b);
 	return (0);
 }

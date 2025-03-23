@@ -1,32 +1,5 @@
 #include "push_swap.h"
 
-void	ft_verify_numbers(int n, char **str)
-{
-	int	i;
-	int	k;
-
-	i = 1;
-	while (i < n)
-	{
-		k = 0;
-		if (!str[i][k])
-			ft_error(3);
-		while (str[i][k])
-		{
-			while ((str[i][k] >= '\t' && str[i][k] <= '\r') || str[i][k] == ' ')
-				k++;
-			if (str[i][k] == '-' || str[i][k] == '+')
-				if (!ft_isdigit(str[i][++k]))
-					ft_error(2);
-			if (!ft_isdigit(str[i][k]) && str[i][k] != '\0')
-				ft_error(2);
-			if (str[i][k])
-				k++;
-		}
-		i++;
-	}
-}
-
 void	ft_process_str(t_node **list, char *str)
 {
 	int	k;
