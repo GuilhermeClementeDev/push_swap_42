@@ -23,7 +23,7 @@ void	ft_print_list(t_node *head, t_node *b)
 	while (b)
 	{
 		ft_printf("%d ", b->content);
-		ft_printf("index: %d zn", b->index);
+		ft_printf("index: %d \n", b->index);
 		b = b->next;
 	}
 	ft_printf("\n");
@@ -44,5 +44,6 @@ int main(int argc, char** argv)
 	list_b = ft_create_stack(0, argv);
 	ft_radix(list_a, list_b);
 	ft_print_list(*list_a, *list_b);
+	exit(7);
 	return (0);
 }

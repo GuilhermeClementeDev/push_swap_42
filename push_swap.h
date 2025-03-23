@@ -25,6 +25,8 @@ void	ft_lstappend(t_node **list, t_node *new);
 int		ft_atoil(const char *nptr, t_node **list);
 void	ft_populate_index(t_node **list_a);
 
+int	ft_list_size(t_node *lst);
+
 void	ft_swap_ab(t_node **head);
 void	ft_push_ab(t_node **pushing, t_node **receiving);
 void	ft_rotate_ab(t_node **head);
