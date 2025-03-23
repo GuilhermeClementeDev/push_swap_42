@@ -34,8 +34,7 @@ void	ft_check_max_min_int(long result, t_node **list)
 {
 	if (result > 2147483647 || result < -2147483648)
 	{
-		if (list != NULL)
-			ft_free_node(list);
+		ft_free_node(list);
 		ft_error(5);
 	}
 }
