@@ -30,4 +30,6 @@ void	ft_push_ab(t_node **pushing, t_node **receiving);
 void	ft_rotate_ab(t_node **head);
 void	ft_reverse_rotate_ab(t_node **head);
 
+void	ft_radix(t_node **list_a, t_node **list_b);
+
 #endif
