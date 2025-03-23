@@ -64,3 +64,26 @@ int	ft_atoil(const char *nptr, t_node **list)
 	ft_check_max_min_int(result, list);
 	return (result);
 }
+void	ft_populate_index(t_node **list_a)
+{
+	t_node	*tmp1;
+	t_node	*tmp2;
+	int	num;
+	int index;
+
+	tmp1 = *list_a;
+	while (tmp1)
+	{
+		index = 0;
+		num = tmp1->content;
+		tmp2 = *list_a;
+		while (tmp2)
+		{
+			if (num > tmp2->content)
+				index++;
+			tmp2 = tmp2->next;
+		}
+		tmp1->index = index;
+		tmp1 = tmp1->next;
+	}
+}

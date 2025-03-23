@@ -8,6 +8,7 @@ typedef struct s_node
 	int				content;
 	struct s_node	*prev;
 	struct s_node	*next;
+	int				index;
 }					t_node;
 
 void	ft_error(int n);
@@ -22,6 +23,7 @@ t_node	**ft_create_stack(int n, char **str);
 t_node	*ft_newnode(int content);
 void	ft_lstappend(t_node **list, t_node *new);
 int		ft_atoil(const char *nptr, t_node **list);
+void	ft_populate_index(t_node **list_a);
 
 void	ft_swap_ab(t_node **head);
 void	ft_push_ab(t_node **pushing, t_node **receiving);
