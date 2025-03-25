@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-void	ft_print_list(t_node *head, t_node *b)
+void	ft_print_list(t_node *head)
 {
 	t_node *tmp;
 
@@ -19,20 +19,13 @@ void	ft_print_list(t_node *head, t_node *b)
 		tmp = tmp->next;
 	}
 	ft_printf("\n");
-	ft_printf("Lista b:\n");
-	while (b)
-	{
-		ft_printf("%d ", b->content);
-		ft_printf("index: %d \n", b->index);
-		b = b->next;
-	}
-	ft_printf("\n");
 }
 
 int main(int argc, char** argv)
 {
 	t_node	**list_a;
 	t_node	**list_b;
+	int		size;
 
 	if (argc == 1)
 		ft_error(1);
@@ -40,10 +33,12 @@ int main(int argc, char** argv)
 	list_a = ft_create_stack(argc, argv);
 	ft_check_equal(list_a);
 	ft_check_order(list_a);
-	ft_populate_index(list_a);
+	size = ft_populate_index(list_a);
 	list_b = ft_create_stack(0, argv);
+	if (size <= 5)
+		ft_small_list(list_a, list_b, size);
 	ft_radix(list_a, list_b);
-	ft_print_list(*list_a, *list_b);
-	exit(7);
+	ft_free_node(list_b);
+	ft_check_order(list_a);
 	return (0);
 }

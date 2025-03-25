@@ -23,7 +23,7 @@ t_node	**ft_create_stack(int n, char **str);
 t_node	*ft_newnode(int content);
 void	ft_lstappend(t_node **list, t_node *new);
 int		ft_atoil(const char *nptr, t_node **list);
-void	ft_populate_index(t_node **list_a);
+int		ft_populate_index(t_node **list_a);
 
 int	ft_list_size(t_node *lst);
 
@@ -33,5 +33,9 @@ void	ft_rotate_ab(t_node **head);
 void	ft_reverse_rotate_ab(t_node **head);
 
 void	ft_radix(t_node **list_a, t_node **list_b);
+
+void	ft_small_list(t_node **list_a, t_node **list_b, int size);
+
+void	ft_print_list(t_node *head);
 
 #endif

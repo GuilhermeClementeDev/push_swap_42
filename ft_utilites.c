@@ -10,6 +10,7 @@ t_node	*ft_newnode(int content)
 	new->content = content;
 	new->prev = NULL;
 	new->next = NULL;
+	new->index = 0;
 	return (new);
 }
 
@@ -64,19 +65,22 @@ int	ft_atoil(const char *nptr, t_node **list)
 	ft_check_max_min_int(result, list);
 	return (result);
 }
-void	ft_populate_index(t_node **list_a)
+int	ft_populate_index(t_node **list_a)
 {
 	t_node	*tmp1;
 	t_node	*tmp2;
-	int	num;
-	int index;
+	int		num;
+	int		index;
+	int		size;
 
 	tmp1 = *list_a;
+	size = 0;
 	while (tmp1)
 	{
 		index = 0;
 		num = tmp1->content;
 		tmp2 = *list_a;
+		size++;
 		while (tmp2)
 		{
 			if (num > tmp2->content)
@@ -86,4 +90,5 @@ void	ft_populate_index(t_node **list_a)
 		tmp1->index = index;
 		tmp1 = tmp1->next;
 	}
+	return (size);
 }
