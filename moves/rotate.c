@@ -1,6 +1,6 @@
 #include "../push_swap.h"
 
-void	ft_rotate_ab(t_node **head)
+void	ra(t_node **head)
 {
 	t_node	*first;
 
@@ -10,8 +10,9 @@ void	ft_rotate_ab(t_node **head)
 		(*head)->prev = NULL;
 	first->next = NULL;
 	ft_lstappend(head, first);
+	ft_printf("ra\n");
 }
-void	ft_reverse_rotate_ab(t_node **head)
+void	rra(t_node **head)
 {
 	t_node	*last;
 
@@ -25,4 +26,5 @@ void	ft_reverse_rotate_ab(t_node **head)
 	last->prev = NULL;
 	(*head)->prev = last;
 	*head = last;
+	ft_printf("rra\n");
 }

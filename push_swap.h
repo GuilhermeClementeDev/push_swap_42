@@ -25,12 +25,14 @@ void	ft_lstappend(t_node **list, t_node *new);
 int		ft_atoil(const char *nptr, t_node **list);
 int		ft_populate_index(t_node **list_a);
 
-int	ft_list_size(t_node *lst);
+int		ft_list_size(t_node *lst);
+void	push_smallest_to_b(t_node **list_a, t_node **list_b);
 
-void	ft_swap_ab(t_node **head);
-void	ft_push_ab(t_node **pushing, t_node **receiving);
-void	ft_rotate_ab(t_node **head);
-void	ft_reverse_rotate_ab(t_node **head);
+void	sa(t_node **head);
+void	pa(t_node **pushing, t_node **receiving);
+void	pb(t_node **pushing, t_node **receiving);
+void	ra(t_node **head);
+void	rra(t_node **head);
 
 void	ft_radix(t_node **list_a, t_node **list_b);
 

@@ -9,30 +9,49 @@ void	ft_sort_three(t_node **list_a)
 	a = (*list_a)->index;
 	b = (*list_a)->next->index;
 	c = (*list_a)->next->next->index;
+	if (a < b && b < c)
+		return ;
 	if (a > c && a > b)
 	{
-		ft_rotate_ab (list_a);
-		ft_check_order (list_a);
-		ft_swap_ab (list_a);
+		ra(list_a);
+		if (b > c)
+			sa(list_a);
 	}
 	else if (c > a && c > b)
-		ft_swap_ab(list_a);
+		sa(list_a);
 	else if (a < c)
 	{
-		ft_swap_ab(list_a);
-		ft_rotate_ab(list_a);
+		sa(list_a);
+		ra(list_a);
 	}
 	else
-		ft_reverse_rotate_ab(list_a);
+		rra(list_a);
+}
+void	ft_sort_four(t_node **list_a, t_node **list_b)
+{
+	push_smallest_to_b(list_a, list_b);
+	ft_sort_three(list_a);
+	pa(list_b, list_a);
+}
+void	ft_sort_five(t_node **list_a, t_node **list_b)
+{
+	push_smallest_to_b(list_a, list_b);
+	ft_sort_four(list_a, list_b);
+	pa(list_b, list_a);
 }
 
-void	ft_small_list(t_node **list_a, int size)
+void	ft_small_list(t_node **list_a, t_node **list_b, int size)
 {
 	if (size == 2)
-		ft_rotate_ab(list_a);
+		sa(list_a);
 	else if (size == 3)
 		ft_sort_three(list_a);
-	//else if (size == 4)
-	//else if (size == 5)
+	else if (size == 4)
+		ft_sort_four(list_a, list_b);
+	else if (size == 5)
+		ft_sort_five(list_a, list_b);
+	ft_print_list(*list_a);
+	ft_print_list(*list_b);
+	ft_free_node(list_b);
 	ft_check_order(list_a);
 }

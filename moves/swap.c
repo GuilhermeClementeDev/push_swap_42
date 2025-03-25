@@ -1,8 +1,6 @@
 #include "../push_swap.h"
 
-//sa, sb, ss
-
-void	ft_swap_ab(t_node **head)
+void	sa(t_node **head)
 {
 	t_node	*first;
 	t_node	*second;
@@ -16,4 +14,5 @@ void	ft_swap_ab(t_node **head)
 	second->prev = NULL;
 	first->prev = second;
 	*head = second;
+	ft_printf("sa\n");
 }
