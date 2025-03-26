@@ -26,7 +26,8 @@ int	ft_list_size(t_node *lst)
 	}
 	return (count);
 }
-int	ft_smallest_pos (t_node *list_a)
+
+int	ft_smallest_pos(t_node *list_a)
 {
 	int	i;
 	int	position;

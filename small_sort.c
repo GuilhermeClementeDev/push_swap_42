@@ -39,12 +39,14 @@ void	ft_sort_three(t_node **list_a)
 	else
 		rra(list_a);
 }
+
 void	ft_sort_four(t_node **list_a, t_node **list_b)
 {
 	push_smallest_to_b(list_a, list_b);
 	ft_sort_three(list_a);
 	pa(list_b, list_a);
 }
+
 void	ft_sort_five(t_node **list_a, t_node **list_b)
 {
 	push_smallest_to_b(list_a, list_b);

@@ -43,7 +43,7 @@ void	ft_check_equal(t_node **list_a)
 {
 	t_node	*tmp1;
 	t_node	*tmp2;
-	int	num;
+	int		num;
 
 	tmp1 = *list_a;
 	while (tmp1)
@@ -62,10 +62,11 @@ void	ft_check_equal(t_node **list_a)
 		tmp1 = tmp1->next;
 	}
 }
+
 void	ft_check_order(t_node **list_a)
 {
 	t_node	*tmp1;
-	int	num;
+	int		num;
 
 	tmp1 = *list_a;
 	while (tmp1)

@@ -14,7 +14,7 @@
 
 void	ft_print_list(t_node *head)
 {
-	t_node *tmp;
+	t_node	*tmp;
 	ft_printf("\n");
 	if (!head)
 	{
@@ -32,7 +32,7 @@ void	ft_print_list(t_node *head)
 	}
 }
 
-int main(int argc, char** argv)
+int	main(int argc, char** argv)
 {
 	t_node	**list_a;
 	t_node	**list_b;

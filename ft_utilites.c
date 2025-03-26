@@ -31,11 +31,11 @@ void	ft_lstappend(t_node **list, t_node *new)
 	t_node	*last;
 
 	if (!list || !new)
-		return;
+		return ;
 	if (*list == NULL)
 	{
 		*list = new;
-		return;
+		return ;
 	}
 	last = *list;
 	while (last->next)
@@ -43,6 +43,7 @@ void	ft_lstappend(t_node **list, t_node *new)
 	last->next = new;
 	new->prev = last;
 }
+
 void	ft_check_max_min_int(long result, t_node **list)
 {
 	if (result > 2147483647 || result < -2147483648)
@@ -51,6 +52,7 @@ void	ft_check_max_min_int(long result, t_node **list)
 		ft_error(5);
 	}
 }
+
 int	ft_atoil(const char *nptr, t_node **list)
 {
 	int		i;
@@ -77,6 +79,7 @@ int	ft_atoil(const char *nptr, t_node **list)
 	ft_check_max_min_int(result, list);
 	return (result);
 }
+
 int	ft_populate_index(t_node **list_a)
 {
 	t_node	*tmp1;

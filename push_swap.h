@@ -13,7 +13,7 @@
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-#include "lib/libft.h"
+# include "lib/libft.h"
 
 typedef struct s_node
 {
@@ -28,7 +28,7 @@ void	ft_free_node(t_node **list);
 
 void	ft_verify_numbers(int n, char **str);
 void	ft_check_equal(t_node **list_a);
-void	ft_check_order(t_node  **list_a);
+void	ft_check_order(t_node **list_a);
 
 t_node	**ft_create_stack(int n, char **str);
 

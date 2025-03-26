@@ -24,6 +24,7 @@ void	ra(t_node **head)
 	ft_lstappend(head, first);
 	ft_printf("ra\n");
 }
+
 void	rra(t_node **head)
 {
 	t_node	*last;

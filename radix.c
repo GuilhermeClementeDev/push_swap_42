@@ -14,9 +14,9 @@
 
 int	ft_sizebits(t_node *list_a)
 {
-	int	index;
+	int		index;
 	t_node	*tmp;
-	int	bits;
+	int		bits;
 
 	index = 0;
 	bits = 0;
@@ -61,4 +61,3 @@ void	ft_radix(t_node **list_a, t_node **list_b)
 		bit++;
 	}
 }
-

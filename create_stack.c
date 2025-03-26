@@ -14,14 +14,14 @@
 
 void	ft_process_str(t_node **list, char *str)
 {
-	int	k;
+	int		k;
 	t_node	*tmp;
 
 	k = 0;
 	while (str[k])
 	{
 		while ((str[k] >= '\t' && str[k] <= '\r') || str[k] == ' ')
-				k++;
+			k++;
 		if (str[k])
 		{
 			tmp = ft_newnode(ft_atoil(&str[k], list));
@@ -29,7 +29,8 @@ void	ft_process_str(t_node **list, char *str)
 				list = &tmp;
 			else
 				ft_lstappend(list, tmp);
-			while (!((str[k] >= '\t' && str[k] <= '\r') || str[k] == ' ') && str[k])
+			while (!((str[k] >= '\t' && str[k] <= '\r') || \
+			str[k] == ' ') && str[k])
 				k++;
 		}
 	}
@@ -37,8 +38,8 @@ void	ft_process_str(t_node **list, char *str)
 
 t_node	**ft_create_stack(int n, char **str)
 {
-	t_node **list;
-	int i;
+	t_node	**list;
+	int		i;
 
 	list = malloc(sizeof(t_node *));
 	if (!list)
