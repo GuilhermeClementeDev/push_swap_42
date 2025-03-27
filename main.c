@@ -19,7 +19,7 @@ int	main(int argc, char **argv)
 	int		size;
 
 	if (argc == 1)
-		ft_error(1);
+		return (0);
 	ft_verify_numbers(argc, argv);
 	list_a = ft_create_stack(argc, argv);
 	ft_check_equal(list_a);
