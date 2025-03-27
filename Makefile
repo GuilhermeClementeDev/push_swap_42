@@ -14,16 +14,23 @@ MY_SOURCES = main.c error.c create_stack.c ft_utilites.c ./moves/swap.c \
 ./moves/push.c ./moves/rotate.c verification.c radix.c ft_utilites2.c \
 small_sort.c
 
+OBJS = $(MY_SOURCES:.c=.o)
+
 all: $(NAME)
 
-$(NAME): $(MY_SOURCES) $(LIBFT)
-	$(CC) $(CFLAGS) $(MY_SOURCES) $(LIBFT) -o $(NAME)
+$(NAME): $(OBJS) $(LIBFT)
+	$(CC) $(CFLAGS) $(OBJS) $(LIBFT) -o $(NAME)
+
+.c.o:
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(LIBFT):
 	@make -C $(LIB_PATH)
 
 clean:
 	@make -C $(LIB_PATH) clean
+	@rm -f $(OBJS)
+
 
 fclean: clean
 	@rm -f $(NAME)

@@ -64,8 +64,6 @@ void	ft_small_list(t_node **list_a, t_node **list_b, int size)
 		ft_sort_four(list_a, list_b);
 	else if (size == 5)
 		ft_sort_five(list_a, list_b);
-	ft_print_list(*list_a);
-	ft_print_list(*list_b);
 	ft_free_node(list_b);
 	ft_check_order(list_a);
 }
