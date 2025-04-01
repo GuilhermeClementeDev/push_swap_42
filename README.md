@@ -21,3 +21,16 @@ To use this project, compile the program and run it with the unsorted integers a
 ```bash
 make
 ./push_swap 3 2 1
+```
+Examples
+```bash
+$ ./push_swap 5 2 8 1 4
+rra
+rra
+pb
+rra
+rra
+pb
+ra
+pa
+pa
