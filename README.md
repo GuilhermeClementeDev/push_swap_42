@@ -1,0 +1,54 @@
+Push_Swap
+Push_Swap is a project from the 42 School curriculum, focused on sorting a stack of integers using a limited set of operations. The goal is to implement an efficient sorting algorithm that sorts a stack using only two stacks and a set of predefined operations. The challenge lies in minimizing the number of operations performed, as the program must solve the problem with the fewest moves possible.
+
+Project Objective
+The objective of this project is to implement a sorting algorithm for an integer stack, i have used the following operations:
+
+sa (swap a): Swap the first two elements of stack A.
+
+pa (push a): Push the top element from stack B onto stack A.
+
+pb (push b): Push the top element from stack A onto stack B.
+
+ra (rotate a): Rotate stack A by shifting all elements up by one.
+
+rra (reverse rotate a): Reverse rotate stack A by shifting all elements down by one.
+
+
+The primary challenge is to determine the optimal sequence of these operations to sort a stack of integers with the least number of operations.
+
+How to Use
+To use this project, compile the program and run it with the unsorted integers as arguments:
+
+bash
+Copy
+make
+./push_swap 3 2 1
+The program will output the series of operations required to sort the integers in the stack.
+
+Examples
+bash
+Copy
+$ ./push_swap 5 2 8 1 4
+pa
+pb
+pb
+sa
+ra
+Project Requirements
+The program must handle both small and large sets of integers efficiently.
+
+The algorithm should operate within a time complexity of O(n log n) for the sorting process.
+
+The program must not use any additional libraries or complex data structures outside of arrays and stacks.
+
+Bonus Features
+The project allows for additional optimizations, such as a more advanced sorting algorithm for handling larger datasets.
+
+Contribution
+This project is part of the 42 School curriculum, and contributions are limited to individual work. If you would like to collaborate or share feedback, feel free to contact me.
+
+License
+This project is open-source under the MIT license.
+
+Feel free to adapt or expand this as needed based on your specific approach or requirements for the project!
